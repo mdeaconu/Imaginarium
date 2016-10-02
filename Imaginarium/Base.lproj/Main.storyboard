@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1912" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oRf-7P-J4X">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Imaginarium-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,172 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-sl-IRM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Peppers"/>
+                                <connections>
+                                    <segue destination="f0T-49-QAh" kind="show" identifier="photo_2" id="xPk-o3-9Mg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-Ra-a0A">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Flower"/>
+                                <connections>
+                                    <segue destination="f0T-49-QAh" kind="show" identifier="photo_1" id="4tN-xf-4Si"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-lw-TOf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Jellyfish"/>
+                                <connections>
+                                    <segue destination="f0T-49-QAh" kind="show" identifier="photo_3" id="b81-7x-UoX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sWE-sl-IRM" firstAttribute="top" secondItem="KTE-Ra-a0A" secondAttribute="bottom" constant="8" symbolic="YES" id="Cpx-15-yPG"/>
+                            <constraint firstItem="PdX-lw-TOf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cqd-mr-Fu4"/>
+                            <constraint firstItem="KTE-Ra-a0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OQn-ad-3dk"/>
+                            <constraint firstItem="sWE-sl-IRM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OWR-4X-N5c"/>
+                            <constraint firstItem="sWE-sl-IRM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WOK-6U-Va9"/>
+                            <constraint firstItem="PdX-lw-TOf" firstAttribute="top" secondItem="sWE-sl-IRM" secondAttribute="bottom" constant="8" symbolic="YES" id="etd-4X-OKq"/>
+                            <constraint firstItem="sWE-sl-IRM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gGX-P7-xDV"/>
+                            <constraint firstItem="PdX-lw-TOf" firstAttribute="top" secondItem="sWE-sl-IRM" secondAttribute="bottom" constant="8" id="iwi-Ch-Qaw"/>
+                            <constraint firstItem="sWE-sl-IRM" firstAttribute="top" secondItem="KTE-Ra-a0A" secondAttribute="bottom" constant="8" id="kCh-sU-mpt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sWE-sl-IRM"/>
+                                <exclude reference="KTE-Ra-a0A"/>
+                                <exclude reference="PdX-lw-TOf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="OQn-ad-3dk"/>
+                                <exclude reference="Cpx-15-yPG"/>
+                                <exclude reference="OWR-4X-N5c"/>
+                                <exclude reference="WOK-6U-Va9"/>
+                                <exclude reference="gGX-P7-xDV"/>
+                                <exclude reference="kCh-sU-mpt"/>
+                                <exclude reference="Cqd-mr-Fu4"/>
+                                <exclude reference="etd-4X-OKq"/>
+                                <exclude reference="iwi-Ch-Qaw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sWE-sl-IRM"/>
+                                <include reference="KTE-Ra-a0A"/>
+                                <include reference="PdX-lw-TOf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="OQn-ad-3dk"/>
+                                <include reference="Cpx-15-yPG"/>
+                                <include reference="OWR-4X-N5c"/>
+                                <include reference="WOK-6U-Va9"/>
+                                <include reference="gGX-P7-xDV"/>
+                                <include reference="kCh-sU-mpt"/>
+                                <include reference="Cqd-mr-Fu4"/>
+                                <include reference="etd-4X-OKq"/>
+                                <include reference="iwi-Ch-Qaw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Imaginarium" id="rK2-2P-9NJ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5O6-QM-xyH"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1425" y="339"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="T0O-d6-lAa">
+            <objects>
+                <viewController id="f0T-49-QAh" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nuO-4I-bAY"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Si-RE-qTy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDo-YK-AEg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-eA-Lf1">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-EI-31q">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S2T-eA-Lf1" firstAttribute="centerX" secondItem="VDo-YK-AEg" secondAttribute="centerX" id="0Lg-Og-5Qm"/>
+                            <constraint firstItem="S2T-eA-Lf1" firstAttribute="centerY" secondItem="VDo-YK-AEg" secondAttribute="centerY" id="HAV-o2-UOQ"/>
+                            <constraint firstItem="S4V-EI-31q" firstAttribute="bottom" secondItem="1Si-RE-qTy" secondAttribute="top" id="JFB-tw-vxz"/>
+                            <constraint firstItem="S4V-EI-31q" firstAttribute="leading" secondItem="VDo-YK-AEg" secondAttribute="leading" id="YaK-pQ-QxH"/>
+                            <constraint firstItem="S4V-EI-31q" firstAttribute="top" secondItem="nuO-4I-bAY" secondAttribute="bottom" id="bUs-hQ-cFV"/>
+                            <constraint firstItem="S4V-EI-31q" firstAttribute="centerX" secondItem="S2T-eA-Lf1" secondAttribute="centerX" id="zc5-zc-5Rf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="S2T-eA-Lf1"/>
+                                <exclude reference="S4V-EI-31q"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JFB-tw-vxz"/>
+                                <exclude reference="YaK-pQ-QxH"/>
+                                <exclude reference="bUs-hQ-cFV"/>
+                                <exclude reference="zc5-zc-5Rf"/>
+                                <exclude reference="0Lg-Og-5Qm"/>
+                                <exclude reference="HAV-o2-UOQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="S2T-eA-Lf1"/>
+                                <include reference="S4V-EI-31q"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JFB-tw-vxz"/>
+                                <include reference="YaK-pQ-QxH"/>
+                                <include reference="bUs-hQ-cFV"/>
+                                <include reference="zc5-zc-5Rf"/>
+                                <include reference="0Lg-Og-5Qm"/>
+                                <include reference="HAV-o2-UOQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="S4V-EI-31q" id="w0a-uA-Gtf"/>
+                        <outlet property="spinner" destination="S2T-eA-Lf1" id="kuW-ES-ptp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVb-N7-G2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QEh-vq-Jbi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oRf-7P-J4X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k7h-0H-Yge">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DRe-G7-epZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESK-NG-SAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xPk-o3-9Mg"/>
+    </inferredMetricsTieBreakers>
 </document>
